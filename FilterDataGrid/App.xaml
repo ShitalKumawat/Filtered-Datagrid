@@ -6,7 +6,7 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Themes/GrayTheme.xaml" />
+                <ResourceDictionary Source="/Themes/DarkTheme.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/ControlLibrary;component/Themes/ButtonStyle.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/ControlLibrary;component/Themes/ListViewStyle.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/ControlLibrary;component/Themes/TextBoxStyle.xaml" />

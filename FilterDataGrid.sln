@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlLibrary", "ControlLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicQueryLibrary", "DynamicQueryLibrary\DynamicQueryLibrary.csproj", "{316F8845-AF43-4C65-BEC8-43D3A707FEF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\DatagridStyle\Common\Common.csproj", "{3841998A-DC46-471A-A4DE-02A6ADC5A8C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{3841998A-DC46-471A-A4DE-02A6ADC5A8C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

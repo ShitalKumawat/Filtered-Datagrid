@@ -157,7 +157,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DatagridStyle\Common\Common.csproj">
+    <ProjectReference Include="..\Common\Common.csproj">
       <Project>{3841998a-dc46-471a-a4de-02a6adc5a8c1}</Project>
       <Name>Common</Name>
     </ProjectReference>
