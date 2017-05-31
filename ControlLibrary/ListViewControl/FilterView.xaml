@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="ControlLibrary.ListViewControl.FilterView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ControlLibrary.ListViewControl"
+             mc:Ignorable="d" 
+            
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Row="0" Margin="2" Name="btnClear" Content="Clear Filter" 
+                HorizontalAlignment="Stretch" 
+                IsEnabled="{Binding IsFilterApplied,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}">
+        </Button>
+        <local:SearchTextBox Grid.Row="1" Margin="2" HorizontalAlignment="Stretch"
+                             Text="{Binding Filter,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                             Style="{StaticResource SearchTextBoxRegularTemplate}"></local:SearchTextBox>
+
+        <ListView x:Name="FilterListView" Margin="2" Focusable="True"
+                  ItemsSource="{Binding ListItems}"
+                  Grid.Row="2" 
+                  VirtualizingStackPanel.IsVirtualizing="True"
+                  VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                   >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox x:Name="chkBox" Margin="0" Content="{Binding Name}" IsChecked="{Binding IsSelected}"
+                              Foreground="{DynamicResource DynamicDefaultControlForegroundBrush}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackPanel Margin="2" Orientation="Horizontal" HorizontalAlignment="Right" Grid.Row="3">
+            <Button Margin="2,0" Name="btnOk" Content="OK" Command="{Binding OkCommand}" Width="50"></Button>
+            <Button Margin="2,0" Name="btnCancel" Content="Cancel" Width="50"></Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

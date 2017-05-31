@@ -1,0 +1,67 @@
+﻿<Window x:Class="TestApplication.TestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestApplication"
+        mc:Ignorable="d"
+        xmlns:tt="clr-namespace:ControlLibrary.ListViewControl;assembly=ControlLibrary"
+        xmlns:datagrid="clr-namespace:ControlLibrary.Datagrid;assembly=ControlLibrary"
+        xmlns:datagridColumns="clr-namespace:ControlLibrary.DatagridColumns;assembly=ControlLibrary"
+        Title="TestWindow" Height="300" Width="300">
+    <Window.Resources>
+        <local:localConverter x:Key="loc"></local:localConverter>
+        <local:NameMultiValueConverter x:Key="NameMultiValueConverter" />
+
+        <DataTemplate x:Key="CustomTemplate">
+            <TextBlock Text="{Binding Path=Content,RelativeSource={RelativeSource AncestorType={x:Type ContentControl}}}"/>
+        </DataTemplate>
+    </Window.Resources>
+    
+    <StackPanel Orientation="Vertical">
+        <datagrid:ExtendedDatagridControl 
+            ItemsSource="{Binding Employees,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+            AutoGenerateColumns="False">
+
+            <DataGrid.Columns>
+
+                <datagridColumns:ExtendedTemplateColumn Header="Status"  FieldName="Designation.stt" AllowFilter="True" IsFiltered="False">
+                    <datagridColumns:ExtendedTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Designation.stt,Converter={StaticResource loc}}"></TextBlock>
+                        </DataTemplate>
+                    </datagridColumns:ExtendedTemplateColumn.CellTemplate>
+                </datagridColumns:ExtendedTemplateColumn>
+
+                <datagridColumns:ExtendedTemplateColumn 
+                    Header="Name"   
+                    Width="100" 
+                     FieldName="Name"  AllowFilter="True" IsFiltered="False"
+                   />
+
+                <datagridColumns:ExtendedTemplateColumn 
+                    Header="Id" 
+                    Width="100" 
+                    FieldName="Designation.t1.Id" AllowFilter="True" IsFiltered="False"/>
+
+
+                <datagridColumns:ExtendedTemplateColumn Header="Birthdate"  FieldName="Birthdate" AllowFilter="True" IsFiltered="False">
+                    <datagridColumns:ExtendedTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Birthdate,StringFormat=dd/mm}" ></TextBlock>
+                        </DataTemplate>
+                    </datagridColumns:ExtendedTemplateColumn.CellTemplate>
+                    <datagridColumns:ExtendedTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <DatePicker SelectedDate="{Binding Birthdate}"></DatePicker>
+                        </DataTemplate>
+                    </datagridColumns:ExtendedTemplateColumn.CellEditingTemplate>
+                </datagridColumns:ExtendedTemplateColumn>
+
+            </DataGrid.Columns>
+
+        </datagrid:ExtendedDatagridControl>
+
+     
+    </StackPanel>
+</Window>

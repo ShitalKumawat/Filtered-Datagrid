@@ -1,0 +1,17 @@
+﻿<Application x:Class="FilterDataGrid.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FilterDataGrid"
+             StartupUri="TestWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Themes/GrayTheme.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/ControlLibrary;component/Themes/ButtonStyle.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/ControlLibrary;component/Themes/ListViewStyle.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/ControlLibrary;component/Themes/TextBoxStyle.xaml" />
+               <ResourceDictionary Source="pack://application:,,,/ControlLibrary;component/Themes/FilterDatagridStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

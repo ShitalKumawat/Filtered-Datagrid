@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication", "FilterDataGrid\TestApplication.csproj", "{A60105EB-1CE5-4D7F-832B-04909985D0D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlLibrary", "ControlLibrary\ControlLibrary.csproj", "{7C55A619-8887-4898-9922-D92130697994}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicQueryLibrary", "DynamicQueryLibrary\DynamicQueryLibrary.csproj", "{316F8845-AF43-4C65-BEC8-43D3A707FEF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "..\DatagridStyle\Common\Common.csproj", "{3841998A-DC46-471A-A4DE-02A6ADC5A8C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A60105EB-1CE5-4D7F-832B-04909985D0D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A60105EB-1CE5-4D7F-832B-04909985D0D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A60105EB-1CE5-4D7F-832B-04909985D0D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A60105EB-1CE5-4D7F-832B-04909985D0D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C55A619-8887-4898-9922-D92130697994}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C55A619-8887-4898-9922-D92130697994}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C55A619-8887-4898-9922-D92130697994}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C55A619-8887-4898-9922-D92130697994}.Release|Any CPU.Build.0 = Release|Any CPU
+		{316F8845-AF43-4C65-BEC8-43D3A707FEF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{316F8845-AF43-4C65-BEC8-43D3A707FEF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{316F8845-AF43-4C65-BEC8-43D3A707FEF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{316F8845-AF43-4C65-BEC8-43D3A707FEF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3841998A-DC46-471A-A4DE-02A6ADC5A8C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3841998A-DC46-471A-A4DE-02A6ADC5A8C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3841998A-DC46-471A-A4DE-02A6ADC5A8C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3841998A-DC46-471A-A4DE-02A6ADC5A8C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
